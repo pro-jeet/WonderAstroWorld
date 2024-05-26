@@ -1,0 +1,652 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		97AEE2D22C03B63F00D17DB7 /* WonderAstroWorldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AEE2D12C03B63F00D17DB7 /* WonderAstroWorldApp.swift */; };
+		97AEE2D42C03B63F00D17DB7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AEE2D32C03B63F00D17DB7 /* ContentView.swift */; };
+		97AEE2D62C03B64200D17DB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97AEE2D52C03B64100D17DB7 /* Assets.xcassets */; };
+		97AEE2DA2C03B64200D17DB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97AEE2D92C03B64200D17DB7 /* Preview Assets.xcassets */; };
+		97AEE2E42C03B64200D17DB7 /* WonderAstroWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AEE2E32C03B64200D17DB7 /* WonderAstroWorldTests.swift */; };
+		97AEE2EE2C03B64200D17DB7 /* WonderAstroWorldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AEE2ED2C03B64200D17DB7 /* WonderAstroWorldUITests.swift */; };
+		97AEE2F02C03B64200D17DB7 /* WonderAstroWorldUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AEE2EF2C03B64200D17DB7 /* WonderAstroWorldUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		97AEE2E02C03B64200D17DB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97AEE2C62C03B63F00D17DB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97AEE2CD2C03B63F00D17DB7;
+			remoteInfo = WonderAstroWorld;
+		};
+		97AEE2EA2C03B64200D17DB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97AEE2C62C03B63F00D17DB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97AEE2CD2C03B63F00D17DB7;
+			remoteInfo = WonderAstroWorld;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		97AEE2CE2C03B63F00D17DB7 /* WonderAstroWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WonderAstroWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		97AEE2D12C03B63F00D17DB7 /* WonderAstroWorldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WonderAstroWorldApp.swift; sourceTree = "<group>"; };
+		97AEE2D32C03B63F00D17DB7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		97AEE2D52C03B64100D17DB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		97AEE2D72C03B64200D17DB7 /* WonderAstroWorld.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WonderAstroWorld.entitlements; sourceTree = "<group>"; };
+		97AEE2D92C03B64200D17DB7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		97AEE2DF2C03B64200D17DB7 /* WonderAstroWorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WonderAstroWorldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		97AEE2E32C03B64200D17DB7 /* WonderAstroWorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WonderAstroWorldTests.swift; sourceTree = "<group>"; };
+		97AEE2E92C03B64200D17DB7 /* WonderAstroWorldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WonderAstroWorldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		97AEE2ED2C03B64200D17DB7 /* WonderAstroWorldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WonderAstroWorldUITests.swift; sourceTree = "<group>"; };
+		97AEE2EF2C03B64200D17DB7 /* WonderAstroWorldUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WonderAstroWorldUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		97AEE2CB2C03B63F00D17DB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97AEE2DC2C03B64200D17DB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97AEE2E62C03B64200D17DB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		97AEE2C52C03B63F00D17DB7 = {
+			isa = PBXGroup;
+			children = (
+				97AEE2D02C03B63F00D17DB7 /* WonderAstroWorld */,
+				97AEE2E22C03B64200D17DB7 /* WonderAstroWorldTests */,
+				97AEE2EC2C03B64200D17DB7 /* WonderAstroWorldUITests */,
+				97AEE2CF2C03B63F00D17DB7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		97AEE2CF2C03B63F00D17DB7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97AEE2CE2C03B63F00D17DB7 /* WonderAstroWorld.app */,
+				97AEE2DF2C03B64200D17DB7 /* WonderAstroWorldTests.xctest */,
+				97AEE2E92C03B64200D17DB7 /* WonderAstroWorldUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		97AEE2D02C03B63F00D17DB7 /* WonderAstroWorld */ = {
+			isa = PBXGroup;
+			children = (
+				97AEE2FF2C03B6F000D17DB7 /* App */,
+				97AEE2FE2C03B6E500D17DB7 /* ViewModels */,
+				97AEE2FD2C03B6DB00D17DB7 /* Views */,
+				97AEE2D82C03B64200D17DB7 /* Preview Content */,
+				97AEE2D72C03B64200D17DB7 /* WonderAstroWorld.entitlements */,
+			);
+			path = WonderAstroWorld;
+			sourceTree = "<group>";
+		};
+		97AEE2D82C03B64200D17DB7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				97AEE2D92C03B64200D17DB7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		97AEE2E22C03B64200D17DB7 /* WonderAstroWorldTests */ = {
+			isa = PBXGroup;
+			children = (
+				97AEE2E32C03B64200D17DB7 /* WonderAstroWorldTests.swift */,
+			);
+			path = WonderAstroWorldTests;
+			sourceTree = "<group>";
+		};
+		97AEE2EC2C03B64200D17DB7 /* WonderAstroWorldUITests */ = {
+			isa = PBXGroup;
+			children = (
+				97AEE2ED2C03B64200D17DB7 /* WonderAstroWorldUITests.swift */,
+				97AEE2EF2C03B64200D17DB7 /* WonderAstroWorldUITestsLaunchTests.swift */,
+			);
+			path = WonderAstroWorldUITests;
+			sourceTree = "<group>";
+		};
+		97AEE2FC2C03B6D200D17DB7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		97AEE2FD2C03B6DB00D17DB7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				97AEE2D32C03B63F00D17DB7 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		97AEE2FE2C03B6E500D17DB7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		97AEE2FF2C03B6F000D17DB7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				97AEE2D12C03B63F00D17DB7 /* WonderAstroWorldApp.swift */,
+				97AEE2D52C03B64100D17DB7 /* Assets.xcassets */,
+				97AEE2FC2C03B6D200D17DB7 /* Models */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		97AEE2CD2C03B63F00D17DB7 /* WonderAstroWorld */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97AEE2F32C03B64200D17DB7 /* Build configuration list for PBXNativeTarget "WonderAstroWorld" */;
+			buildPhases = (
+				97AEE2CA2C03B63F00D17DB7 /* Sources */,
+				97AEE2CB2C03B63F00D17DB7 /* Frameworks */,
+				97AEE2CC2C03B63F00D17DB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WonderAstroWorld;
+			productName = WonderAstroWorld;
+			productReference = 97AEE2CE2C03B63F00D17DB7 /* WonderAstroWorld.app */;
+			productType = "com.apple.product-type.application";
+		};
+		97AEE2DE2C03B64200D17DB7 /* WonderAstroWorldTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97AEE2F62C03B64200D17DB7 /* Build configuration list for PBXNativeTarget "WonderAstroWorldTests" */;
+			buildPhases = (
+				97AEE2DB2C03B64200D17DB7 /* Sources */,
+				97AEE2DC2C03B64200D17DB7 /* Frameworks */,
+				97AEE2DD2C03B64200D17DB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				97AEE2E12C03B64200D17DB7 /* PBXTargetDependency */,
+			);
+			name = WonderAstroWorldTests;
+			productName = WonderAstroWorldTests;
+			productReference = 97AEE2DF2C03B64200D17DB7 /* WonderAstroWorldTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		97AEE2E82C03B64200D17DB7 /* WonderAstroWorldUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97AEE2F92C03B64200D17DB7 /* Build configuration list for PBXNativeTarget "WonderAstroWorldUITests" */;
+			buildPhases = (
+				97AEE2E52C03B64200D17DB7 /* Sources */,
+				97AEE2E62C03B64200D17DB7 /* Frameworks */,
+				97AEE2E72C03B64200D17DB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				97AEE2EB2C03B64200D17DB7 /* PBXTargetDependency */,
+			);
+			name = WonderAstroWorldUITests;
+			productName = WonderAstroWorldUITests;
+			productReference = 97AEE2E92C03B64200D17DB7 /* WonderAstroWorldUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		97AEE2C62C03B63F00D17DB7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					97AEE2CD2C03B63F00D17DB7 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					97AEE2DE2C03B64200D17DB7 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 97AEE2CD2C03B63F00D17DB7;
+					};
+					97AEE2E82C03B64200D17DB7 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 97AEE2CD2C03B63F00D17DB7;
+					};
+				};
+			};
+			buildConfigurationList = 97AEE2C92C03B63F00D17DB7 /* Build configuration list for PBXProject "WonderAstroWorld" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 97AEE2C52C03B63F00D17DB7;
+			productRefGroup = 97AEE2CF2C03B63F00D17DB7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				97AEE2CD2C03B63F00D17DB7 /* WonderAstroWorld */,
+				97AEE2DE2C03B64200D17DB7 /* WonderAstroWorldTests */,
+				97AEE2E82C03B64200D17DB7 /* WonderAstroWorldUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		97AEE2CC2C03B63F00D17DB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97AEE2DA2C03B64200D17DB7 /* Preview Assets.xcassets in Resources */,
+				97AEE2D62C03B64200D17DB7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97AEE2DD2C03B64200D17DB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97AEE2E72C03B64200D17DB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		97AEE2CA2C03B63F00D17DB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97AEE2D42C03B63F00D17DB7 /* ContentView.swift in Sources */,
+				97AEE2D22C03B63F00D17DB7 /* WonderAstroWorldApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97AEE2DB2C03B64200D17DB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97AEE2E42C03B64200D17DB7 /* WonderAstroWorldTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97AEE2E52C03B64200D17DB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97AEE2F02C03B64200D17DB7 /* WonderAstroWorldUITestsLaunchTests.swift in Sources */,
+				97AEE2EE2C03B64200D17DB7 /* WonderAstroWorldUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		97AEE2E12C03B64200D17DB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97AEE2CD2C03B63F00D17DB7 /* WonderAstroWorld */;
+			targetProxy = 97AEE2E02C03B64200D17DB7 /* PBXContainerItemProxy */;
+		};
+		97AEE2EB2C03B64200D17DB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97AEE2CD2C03B63F00D17DB7 /* WonderAstroWorld */;
+			targetProxy = 97AEE2EA2C03B64200D17DB7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		97AEE2F12C03B64200D17DB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		97AEE2F22C03B64200D17DB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		97AEE2F42C03B64200D17DB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WonderAstroWorld/WonderAstroWorld.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WonderAstroWorld/Preview Content\"";
+				DEVELOPMENT_TEAM = L6GPK4HHXS;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.RetailApp.WonderAstroWorld;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		97AEE2F52C03B64200D17DB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WonderAstroWorld/WonderAstroWorld.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WonderAstroWorld/Preview Content\"";
+				DEVELOPMENT_TEAM = L6GPK4HHXS;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.RetailApp.WonderAstroWorld;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		97AEE2F72C03B64200D17DB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L6GPK4HHXS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.RetailApp.WonderAstroWorldTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WonderAstroWorld.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WonderAstroWorld";
+			};
+			name = Debug;
+		};
+		97AEE2F82C03B64200D17DB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L6GPK4HHXS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.RetailApp.WonderAstroWorldTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WonderAstroWorld.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WonderAstroWorld";
+			};
+			name = Release;
+		};
+		97AEE2FA2C03B64200D17DB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L6GPK4HHXS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.RetailApp.WonderAstroWorldUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WonderAstroWorld;
+			};
+			name = Debug;
+		};
+		97AEE2FB2C03B64200D17DB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L6GPK4HHXS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.RetailApp.WonderAstroWorldUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WonderAstroWorld;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		97AEE2C92C03B63F00D17DB7 /* Build configuration list for PBXProject "WonderAstroWorld" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97AEE2F12C03B64200D17DB7 /* Debug */,
+				97AEE2F22C03B64200D17DB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97AEE2F32C03B64200D17DB7 /* Build configuration list for PBXNativeTarget "WonderAstroWorld" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97AEE2F42C03B64200D17DB7 /* Debug */,
+				97AEE2F52C03B64200D17DB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97AEE2F62C03B64200D17DB7 /* Build configuration list for PBXNativeTarget "WonderAstroWorldTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97AEE2F72C03B64200D17DB7 /* Debug */,
+				97AEE2F82C03B64200D17DB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97AEE2F92C03B64200D17DB7 /* Build configuration list for PBXNativeTarget "WonderAstroWorldUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97AEE2FA2C03B64200D17DB7 /* Debug */,
+				97AEE2FB2C03B64200D17DB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 97AEE2C62C03B63F00D17DB7 /* Project object */;
+}
