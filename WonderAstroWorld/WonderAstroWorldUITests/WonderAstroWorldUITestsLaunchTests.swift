@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import WonderAstroWorld
 
 final class WonderAstroWorldUITestsLaunchTests: XCTestCase {
 

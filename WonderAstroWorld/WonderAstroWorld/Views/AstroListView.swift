@@ -15,14 +15,6 @@ struct AstroListView: View {
     @State private var date = Date()
     @State private var error: String? = nil
     
-    var dateLimit: Date {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = dateFormat
-        return dateFormatter.date(from: lowerDateLimit)!
-    }
-    
-    private let dateFormat = "YYYY-MM-dd"
-    private let lowerDateLimit = "1995-06-22"
     private let mainTitle = "Wonder Astronomy"
     private let calendarImageName = "calendar.circle"
     private let infoSelectDate = "Select date to view 'Astronomy Picture of the Day' for the last 7 days from the selected date."
@@ -33,9 +25,12 @@ struct AstroListView: View {
     private let detailViewStaticText = "Detail View"
     private let emptyString = ""
     private let reloadButtonTitle = "Reload"
+    private let timeZone = "America/New_York"
     private let calendarButtonSize: CGFloat = 50
     private let astroCardWidth: CGFloat = 280
     private let astroCardHeight: CGFloat = 420
+    private let ScreenSize = UIScreen.main.bounds
+    private let wAWCornerRadius: CGFloat = 10
     
     var body: some View {
         
@@ -85,9 +80,10 @@ struct AstroListView: View {
                                                         
                             DatePicker(datePlaceholder,
                                        selection: $date,
-                                       in: dateLimit...Date(),
+                                       in: AstroListViewModel().dateLimit...Date(),
                                        displayedComponents: [.date])
                                 .tint(.blue)
+                                .environment(\.timeZone, TimeZone(identifier: timeZone)!)
                             
                             Button(action: {
                                 astroArray = nil
@@ -118,7 +114,7 @@ struct AstroListView: View {
                                     AstroCardView(astro: astro)
                                         .frame(minWidth: astroCardWidth, maxWidth: .infinity, minHeight: astroCardHeight, maxHeight: .infinity)
                                         .background(.secondary)
-                                        .cornerRadius(WAWCornerRadius)
+                                        .cornerRadius(wAWCornerRadius)
                                         .padding()
                                 })
                                 
@@ -143,6 +139,7 @@ struct AstroListView: View {
                     if error == nil {
                         self.astroArray = astroArray
                         self.reload.toggle()
+                        self.error = nil
                     } else {
                         self.error = error
                         self.reload.toggle()

@@ -1,0 +1,41 @@
+{
+  "configurations" : [
+    {
+      "id" : "FBF4EBD0-A1E4-4565-B37C-19DD6EE96D90",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "environmentVariableEntries" : [
+      {
+        "key" : "IDEPreferLogStreaming",
+        "value" : "YES"
+      }
+    ],
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:WonderAstroWorld.xcodeproj",
+      "identifier" : "97AEE2CD2C03B63F00D17DB7",
+      "name" : "WonderAstroWorld"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:WonderAstroWorld.xcodeproj",
+        "identifier" : "97AEE2DE2C03B64200D17DB7",
+        "name" : "WonderAstroWorldTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:WonderAstroWorld.xcodeproj",
+        "identifier" : "97AEE2E82C03B64200D17DB7",
+        "name" : "WonderAstroWorldUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

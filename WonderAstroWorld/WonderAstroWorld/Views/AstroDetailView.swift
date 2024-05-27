@@ -29,6 +29,9 @@ struct AstroDetailView: View {
     private let emptyString = ""
     private let inExpandedLineLimit = 5
     private let buttonFontSize: CGFloat = 15
+    private let ScreenSize = UIScreen.main.bounds
+    private let wAWCornerRadius: CGFloat = 10
+    private let paddingProgressView = UIScreen.main.bounds.width/CGFloat(2)
     
     var body: some View {
         
@@ -93,6 +96,7 @@ struct AstroDetailView: View {
                             if showProgressView {
                                 ProgressView()
                                     .controlSize(.extraLarge)
+                                    .padding(.leading, paddingProgressView)
                             } else {
                                 
                                 if image == nil {
@@ -102,6 +106,8 @@ struct AstroDetailView: View {
                                             .tint(.red)
                                     } else {
                                         ProgressView()
+                                            .controlSize(.extraLarge)
+                                            .padding(.leading, paddingProgressView)
                                     }
                                 } else {
                                     
@@ -110,7 +116,7 @@ struct AstroDetailView: View {
                                             .resizable()
                                             .frame(minWidth: 0, maxWidth: ScreenSize.width, minHeight: 0, maxHeight: ScreenSize.height)
                                             .background(.pink)
-                                            .cornerRadius(WAWCornerRadius)
+                                            .cornerRadius(wAWCornerRadius)
                                             .padding()
                                             .onTapGesture {
                                                 showImageOnFullScreen = true
@@ -149,8 +155,9 @@ struct AstroDetailView: View {
                         
                         if error == nil {
                             self.image = uiImage
-                        } else {
                             self.error = nil
+                        } else {
+                            self.error = error
                         }
                         self.showProgressView = false
                         self.reload.toggle()

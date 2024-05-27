@@ -9,14 +9,26 @@ import Foundation
 
 class AstroListViewModel: ObservableObject {
     
+    private let dateFormat = "YYYY-MM-dd"
+    private let lowerDateLimit = "1995-06-22"
+    
     @Published var astroArray: [Astro]? = nil
+    
+    var dateLimit: Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = dateFormat
+        dateFormatter.timeZone = TimeZone(identifier: "America/New_York")!
+        return dateFormatter.date(from: lowerDateLimit)!
+    }
     
     func fetchAstroData(endDate: Date, completion: @escaping ([Astro]?, String?) -> Void) {
         
         let startDateString = getStartDate(endDate: endDate)
         let endDateString = getEndDate(date: endDate)
         
-        let urlString = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=" + startDateString + "&end_date=" + endDateString
+        let urlString = "https://api.nasa.gov/planetary/apod?api_key=s06Eyw4j4relR5FC3nb03VcPJWxvYBCpNYqSMViX&start_date=" + startDateString + "&end_date=" + endDateString
+        
+        print(urlString)
         
         guard let url = URL(string: urlString) else { return }
         
@@ -39,6 +51,8 @@ class AstroListViewModel: ObservableObject {
             
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "YYYY-MM-dd"
+            dateFormatter.timeZone = TimeZone(identifier: "America/New_York")!
+
             let dateString = dateFormatter.string(from: endDate)
             return dateString
         } else {
@@ -50,6 +64,7 @@ class AstroListViewModel: ObservableObject {
         if let startDate = Calendar.current.date(byAdding: .day, value: -6, to: endDate) {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "YYYY-MM-dd"
+            dateFormatter.timeZone = TimeZone(identifier: "America/New_York")!
             let dateString = dateFormatter.string(from: startDate)
             return dateString
         } else {
