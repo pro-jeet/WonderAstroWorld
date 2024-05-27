@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		973C3D492C052A1300BA0C3C /* testAstroListViewModelUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C3D482C052A1300BA0C3C /* testAstroListViewModelUnitTests.swift */; };
+		973C3D4B2C052D2700BA0C3C /* testAstroCardViewModelUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C3D4A2C052D2700BA0C3C /* testAstroCardViewModelUnitTests.swift */; };
+		973C3D4D2C052E2E00BA0C3C /* testAstroDetailViewModelUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C3D4C2C052E2E00BA0C3C /* testAstroDetailViewModelUnitTests.swift */; };
 		97AEE2D22C03B63F00D17DB7 /* WonderAstroWorldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AEE2D12C03B63F00D17DB7 /* WonderAstroWorldApp.swift */; };
 		97AEE2D42C03B63F00D17DB7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AEE2D32C03B63F00D17DB7 /* ContentView.swift */; };
 		97AEE2D62C03B64200D17DB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97AEE2D52C03B64100D17DB7 /* Assets.xcassets */; };
@@ -55,6 +58,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		973C3D482C052A1300BA0C3C /* testAstroListViewModelUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testAstroListViewModelUnitTests.swift; sourceTree = "<group>"; };
+		973C3D4A2C052D2700BA0C3C /* testAstroCardViewModelUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testAstroCardViewModelUnitTests.swift; sourceTree = "<group>"; };
+		973C3D4C2C052E2E00BA0C3C /* testAstroDetailViewModelUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testAstroDetailViewModelUnitTests.swift; sourceTree = "<group>"; };
 		97AEE2CE2C03B63F00D17DB7 /* WonderAstroWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WonderAstroWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97AEE2D12C03B63F00D17DB7 /* WonderAstroWorldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WonderAstroWorldApp.swift; sourceTree = "<group>"; };
 		97AEE2D32C03B63F00D17DB7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -155,6 +161,9 @@
 			isa = PBXGroup;
 			children = (
 				97AEE2E32C03B64200D17DB7 /* WonderAstroWorldTests.swift */,
+				973C3D482C052A1300BA0C3C /* testAstroListViewModelUnitTests.swift */,
+				973C3D4A2C052D2700BA0C3C /* testAstroCardViewModelUnitTests.swift */,
+				973C3D4C2C052E2E00BA0C3C /* testAstroDetailViewModelUnitTests.swift */,
 			);
 			path = WonderAstroWorldTests;
 			sourceTree = "<group>";
@@ -381,6 +390,9 @@
 				97AEE3062C03BC5000D17DB7 /* Astro.swift in Sources */,
 				97AEE3172C03E58100D17DB7 /* APIClient.swift in Sources */,
 				97AEE3382C04E0DD00D17DB7 /* NetworkProtocol.swift in Sources */,
+				973C3D492C052A1300BA0C3C /* testAstroListViewModelUnitTests.swift in Sources */,
+				973C3D4D2C052E2E00BA0C3C /* testAstroDetailViewModelUnitTests.swift in Sources */,
+				973C3D4B2C052D2700BA0C3C /* testAstroCardViewModelUnitTests.swift in Sources */,
 				97AEE3342C04E0B200D17DB7 /* MyError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

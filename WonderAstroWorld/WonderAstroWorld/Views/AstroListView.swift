@@ -26,6 +26,7 @@ struct AstroListView: View {
     private let emptyString = ""
     private let reloadButtonTitle = "Reload"
     private let timeZone = "America/New_York"
+    private let identifies = "NavigationCell"
     private let calendarButtonSize: CGFloat = 50
     private let astroCardWidth: CGFloat = 280
     private let astroCardHeight: CGFloat = 420
@@ -116,6 +117,7 @@ struct AstroListView: View {
                                         .background(.secondary)
                                         .cornerRadius(wAWCornerRadius)
                                         .padding()
+                                        .accessibilityIdentifier(identifies)
                                 })
                                 
                             }
