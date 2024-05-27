@@ -29,7 +29,7 @@ class AstroCardViewModel {
                             CacheMemory.shared.set(uiImage, forKey: key)
                             completion(uiImage, nil)
                         } else {
-                            completion(nil, "Failed to convert to UIImage")
+                            completion(nil, MyError.failedToConvertDataToUIImage.errorDescription)
                         }
                         case .failure(let error):
                         completion(nil, error.localizedDescription)

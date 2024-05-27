@@ -7,39 +7,59 @@
 
 import SwiftUI
 
-let ScreenSize = UIScreen.main.bounds
-let padding: CGFloat = 30
-
 struct AstroListView: View {
     
-    @State var astroArray = AstroListViewModel().astroArray
-    @State var reload = false
-    @State var showCalendar = false
+    @State private var astroArray = AstroListViewModel().astroArray
+    @State private var reload = false
+    @State private var showCalendar = false
     @State private var date = Date()
-    @State var error: String? = nil
+    @State private var error: String? = nil
     
     var dateLimit: Date {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "YYYY-MM-dd"
-        return dateFormatter.date(from: "1995-06-22")!
+        dateFormatter.dateFormat = dateFormat
+        return dateFormatter.date(from: lowerDateLimit)!
     }
-
+    
+    private let dateFormat = "YYYY-MM-dd"
+    private let lowerDateLimit = "1995-06-22"
+    private let mainTitle = "Wonder Astronomy"
+    private let calendarImageName = "calendar.circle"
+    private let infoSelectDate = "Select date to view 'Astronomy Picture of the Day' for the last 7 days from the selected date."
+    private let datePlaceholder = "Date"
+    private let doneButtonTitle = "Done"
+    private let doneButtonFootnote = "Select the Date and Press Done!"
+    private let titleSection = "Picture of the Day"
+    private let detailViewStaticText = "Detail View"
+    private let emptyString = ""
+    private let reloadButtonTitle = "Reload"
+    private let calendarButtonSize: CGFloat = 50
+    private let astroCardWidth: CGFloat = 280
+    private let astroCardHeight: CGFloat = 420
+    
     var body: some View {
         
         VStack {
             
             if astroArray == nil {
                 if let error = error {
-                    Text(error)
-                        .font(.title)
-                        .tint(.red)
+                    VStack {
+                        Text(error)
+                            .font(.title)
+                            .tint(.red)
+                        Button(action: {
+                            loadData()
+                        }, label: {
+                            Text(reloadButtonTitle)
+                        })
+                    }
                 } else {
                     ProgressView()
                 }
             } else {
                 
                 NavigationSplitView {
-                    Text("Wonder Astronomy")
+                    Text(mainTitle)
                         .toolbar {
                             ToolbarItem(placement: .automatic) {
                                 
@@ -48,8 +68,8 @@ struct AstroListView: View {
                                     showCalendar.toggle()
                                     
                                 }, label: {
-                                    Image(systemName: "calendar.circle")
-                                        .frame(width: 50, height: 50)
+                                    Image(systemName: calendarImageName)
+                                        .frame(width: calendarButtonSize, height: calendarButtonSize)
                                         .tint(.blue)
                                 })
                                 
@@ -60,10 +80,10 @@ struct AstroListView: View {
                     if showCalendar {
                         VStack {
                             
-                            Text("Select date to view 'Astronomy Picture of the Day' for the last 7 days from the selected date.")
+                            Text(infoSelectDate)
                                 .font(.footnote)
                                                         
-                            DatePicker("Date",
+                            DatePicker(datePlaceholder,
                                        selection: $date,
                                        in: dateLimit...Date(),
                                        displayedComponents: [.date])
@@ -74,10 +94,10 @@ struct AstroListView: View {
                                 loadData()
                                 showCalendar.toggle()
                             }, label: {
-                                Text("Done")
+                                Text(doneButtonTitle)
                             })
                             
-                            Text("Select the Date and Press Done!")
+                            Text(doneButtonFootnote)
                                 .font(.caption)
 
                         }
@@ -86,9 +106,9 @@ struct AstroListView: View {
                     }
                     
                     ScrollView {
-                        LazyVStack(alignment: .leading) {
+                        LazyVStack(alignment: .center) {
                             
-                            Text("Picture of the Day")
+                            Text(titleSection)
                                 .font(.headline)
                                 .padding()
                             
@@ -96,9 +116,9 @@ struct AstroListView: View {
                                 
                                 NavigationLink(destination: AstroDetailView(astro: astro), label: {
                                     AstroCardView(astro: astro)
-                                        .frame(minWidth: 280, maxWidth: .infinity, minHeight: 420, maxHeight: .infinity)
+                                        .frame(minWidth: astroCardWidth, maxWidth: .infinity, minHeight: astroCardHeight, maxHeight: .infinity)
                                         .background(.secondary)
-                                        .cornerRadius(10)
+                                        .cornerRadius(WAWCornerRadius)
                                         .padding()
                                 })
                                 
@@ -107,7 +127,7 @@ struct AstroListView: View {
                         }
                     }
                 } detail: {
-                    Text(reload ? "" : "Detail View")
+                    Text(reload ? emptyString : detailViewStaticText)
                 }
             }
         }
@@ -116,17 +136,18 @@ struct AstroListView: View {
         }
     }
     
-    func loadData() {
+    private func loadData() {
         DispatchQueue.global().async {
             AstroListViewModel().fetchAstroData(endDate: date, completion: { astroArray, error in
                 DispatchQueue.main.async {
                     if error == nil {
-                        self.astroArray = astroArray?.reversed()
+                        self.astroArray = astroArray
                         self.reload.toggle()
                     } else {
                         self.error = error
                         self.reload.toggle()
                     }
+                    
                 }
             })
         }

@@ -27,7 +27,7 @@ class AstroListViewModel: ObservableObject {
         apiClient.sendRequests(type: [Astro].self, request: request) { result in
             switch result {
                 case .success(let astroArray):
-                completion(astroArray, nil)
+                completion(astroArray.reversed(), nil)
                 case .failure(let error):
                 completion(nil, error.localizedDescription)
             }

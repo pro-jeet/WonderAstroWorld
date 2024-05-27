@@ -9,10 +9,15 @@ import SwiftUI
 
 struct AstroCardView: View {
     
-    @State var astro: Astro?
-    @State var uiImage: UIImage?
-    @State var error: String?
-    @State var reload = false
+    var astro: Astro?
+    @State private var uiImage: UIImage?
+    @State private var error: String?
+    @State private var reload = false
+    
+    private let titlePlaceholder = "Title"
+    private let datePlaceholder = "Date"
+    private let emptyString = ""
+    private let imageHeight: CGFloat = 400
     
     var body: some View {
         VStack {
@@ -20,15 +25,15 @@ struct AstroCardView: View {
             
             if let astro = astro {
                 VStack {
-                    Text(astro.title ?? "Title")
+                    Text(astro.title ?? titlePlaceholder)
                         .tint(.black)
-                    Text(astro.date ?? "Date")
+                    Text(astro.date ?? datePlaceholder)
                         .tint(.black)
 
                 }
                 .padding()
                 
-                Text(reload ? "" : "")
+                Text(reload ? emptyString : emptyString)
                 
                 if uiImage == nil {
                     if let error = error {
@@ -42,27 +47,28 @@ struct AstroCardView: View {
                     if let uiImage = uiImage {
                         Image(uiImage: uiImage)
                             .resizable()
-                            .frame(height: 400)
+                            .frame(height: imageHeight)
                     }
                 }
-                
-                Spacer()
-                
             }
         }
         .onAppear {
-            if let astro = astro {
-                if let urlString = astro.url, let key = astro.date {
-                    DispatchQueue.global().async {
-                        AstroCardViewModel().getData(urlString: urlString, key: key) { data, error   in
-                            DispatchQueue.main.async {
-                                if error == nil {
-                                    self.uiImage = data
-                                } else {
-                                    self.error = nil
-                                }
-                                self.reload.toggle()
+            loadData()
+        }
+    }
+    
+    private func loadData() {
+        if let astro = astro {
+            if let urlString = astro.url, let key = astro.date {
+                DispatchQueue.global().async {
+                    AstroCardViewModel().getData(urlString: urlString, key: key) { data, error   in
+                        DispatchQueue.main.async {
+                            if error == nil {
+                                self.uiImage = data
+                            } else {
+                                self.error = nil
                             }
+                            self.reload.toggle()
                         }
                     }
                 }

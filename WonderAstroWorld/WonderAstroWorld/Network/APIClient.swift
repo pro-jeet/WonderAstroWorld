@@ -7,12 +7,8 @@
 
 import Foundation
 
-protocol NetworkProtocol {
-    func sendDataRequest(request: URLRequest, completion: @escaping (Result<Data, Error>) -> Void)
-    func sendRequests<T: Decodable>(type: [T].Type, request: URLRequest, completion: @escaping (Result<[T], Error>) -> Void)
-}
-
 class APIClient: NetworkProtocol {
+    
     func sendDataRequest(request: URLRequest, completion: @escaping (Result<Data, Error>) -> Void) {
         // Implement logic to send the network request using URLSession
         URLSession(configuration: .ephemeral).dataTask(with: request) { data, response, error in
@@ -22,7 +18,7 @@ class APIClient: NetworkProtocol {
             }
             
             guard let data = data else {
-                completion(.failure(NSError(domain: "Network error", code: 1, userInfo: nil)))
+                completion(.failure(MyError.networkError))
                 return
             }
             
@@ -40,7 +36,7 @@ class APIClient: NetworkProtocol {
             }
             
             guard let data = data else {
-                completion(.failure(NSError(domain: "Network error", code: 1, userInfo: nil)))
+                completion(.failure(MyError.networkError))
                 return
             }
             
