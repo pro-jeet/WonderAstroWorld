@@ -46,6 +46,7 @@ Additional Features Added:
     - Timezone added ad api works in US timezone.
     - ProgressView addded to show loading Screen.
     - Error handling added.
+    - Added Support for WebView to show content other than Picture.
   
 5. Added plist for storing API_KEY.
 
