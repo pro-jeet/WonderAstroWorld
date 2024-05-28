@@ -40,6 +40,8 @@ struct AstroDetailView: View {
     @State private var error: String?
     @State private var reload = false
     @State private var showImageOnFullScreen = false
+    @State var urlString: String? = nil
+    
     
     // Constants
     private let titlePlaceholder = "Title"
@@ -50,12 +52,15 @@ struct AstroDetailView: View {
     private let readMoreButtonTitle = "Read More"
     private let readLessButtonTitle = "Read Less"
     private let emptyString = ""
+    private let loadedWebViewStaticText = "Loaded in WebView"
     private let inExpandedLineLimit = 5
     private let buttonFontSize: CGFloat = 15
     private let ScreenSize = UIScreen.main.bounds
     private let wAWCornerRadius: CGFloat = 10
     private let paddingProgressView = UIScreen.main.bounds.width/CGFloat(2)
-    
+    private let webViewWidthHeight: CGFloat = 350
+    private let paddingWebView: CGFloat = 30
+
     // View body
     var body: some View {
         
@@ -126,9 +131,24 @@ struct AstroDetailView: View {
                                 
                                 if image == nil {
                                     if let error = error {
-                                        Text(error)
-                                            .font(.title)
-                                            .tint(.red)
+                                        if urlString != nil {
+                                            
+                                            VStack (alignment: .center) {
+                                                
+                                                Text(loadedWebViewStaticText)
+                                                    .font(.caption)
+                                                    .tint(.pink)
+                                                
+                                                WebView(url: urlString!)
+                                                    .frame(width: webViewWidthHeight, height: webViewWidthHeight)
+                                            }.padding(.leading, paddingWebView)
+                                                
+                                        } else {
+                                            Text(error)
+                                                .font(.title)
+                                                .tint(.pink)
+                                        }
+
                                     } else {
                                         ProgressView()
                                             .controlSize(.extraLarge)
@@ -184,6 +204,7 @@ struct AstroDetailView: View {
                             self.error = nil
                         } else {
                             self.error = error
+                            self.urlString = urlString
                         }
                         self.showProgressView = false
                         self.reload.toggle()

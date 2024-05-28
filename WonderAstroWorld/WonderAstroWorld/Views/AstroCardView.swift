@@ -34,11 +34,13 @@ struct AstroCardView: View {
     @State private var uiImage: UIImage?
     @State private var error: String?
     @State private var reload = false
+    @State var urlString: String? = nil
     
     // Constants
     private let titlePlaceholder = "Title"
     private let datePlaceholder = "Date"
     private let emptyString = ""
+    private let loadedWebViewStaticText = "Loaded in WebView"
     private let imageHeight: CGFloat = 400
     
     var body: some View {
@@ -60,9 +62,21 @@ struct AstroCardView: View {
                 
                 if uiImage == nil {
                     if let error = error {
-                        Text(error)
-                            .font(.title)
-                            .tint(.red)
+                        
+                        
+                        if urlString != nil {
+                            Text(loadedWebViewStaticText)
+                                .font(.caption)
+                                .tint(.pink)
+                            
+                            WebView(url: urlString!)
+
+                        } else {
+                            Text(error)
+                                .font(.title)
+                                .tint(.pink)
+                        }
+                        
                     } else {
                         ProgressView()
                     }
@@ -91,8 +105,10 @@ struct AstroCardView: View {
                         DispatchQueue.main.async {
                             if error == nil {
                                 self.uiImage = data
-                            } else {
                                 self.error = nil
+                            } else {
+                                self.error = error
+                                self.urlString = urlString
                             }
                             self.reload.toggle()
                         }
