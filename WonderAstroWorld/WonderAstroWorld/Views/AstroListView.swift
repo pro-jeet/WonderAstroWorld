@@ -7,14 +7,37 @@
 
 import SwiftUI
 
+/**
+ A SwiftUI view representing a list of astronomical data.
+
+ This view displays a list of astronomical data fetched from NASA's Astronomy Picture of the Day (APOD) API. It allows users to select a date to view the "Astronomy Picture of the Day" for the last 7 days from the selected date.
+
+ ## Properties:
+ - `astroArray`: An array of astronomical data fetched from the API.
+ - `reload`: A boolean value to trigger data reloading.
+ - `showCalendar`: A boolean value to control the visibility of the date picker.
+ - `date`: The selected date for fetching astronomical data.
+ - `error`: An optional string representing any error occurred during data fetching.
+
+ ## Constants:
+ - Various constants used for UI styling and layout.
+
+ ## Methods:
+ - `loadData()`: Asynchronously loads astronomical data from the API based on the selected date.
+
+ This view utilizes various SwiftUI components such as `NavigationLink`, `ScrollView`, and `LazyVStack` to display the list of astronomical data. It also includes a toolbar button to toggle the date picker, a date picker to select a date, and a reload button in case of an error during data fetching.
+*/
+
 struct AstroListView: View {
     
+    // Properties
     @State private var astroArray = AstroListViewModel().astroArray
     @State private var reload = false
     @State private var showCalendar = false
     @State private var date = Date()
     @State private var error: String? = nil
     
+    // Constants
     private let mainTitle = "Wonder Astronomy"
     private let calendarImageName = "calendar.circle"
     private let infoSelectDate = "Select date to view 'Astronomy Picture of the Day' for the last 7 days from the selected date."
@@ -34,7 +57,7 @@ struct AstroListView: View {
     private let wAWCornerRadius: CGFloat = 10
     
     var body: some View {
-        
+        // View hierarchy
         VStack {
             
             if astroArray == nil {
@@ -134,7 +157,9 @@ struct AstroListView: View {
         }
     }
     
+    // Methods
     private func loadData() {
+        // Data loading logic
         DispatchQueue.global().async {
             AstroListViewModel().fetchAstroData(endDate: date, completion: { astroArray, error in
                 DispatchQueue.main.async {

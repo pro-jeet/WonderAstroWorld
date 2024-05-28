@@ -7,10 +7,13 @@
 
 import Foundation
 
+// APIClient class responsible for handling network requests conforming to NetworkProtocol
+
 class APIClient: NetworkProtocol {
     
+    // Sends a data request using URLSession
     func sendDataRequest(request: URLRequest, completion: @escaping (Result<Data, Error>) -> Void) {
-        // Implement logic to send the network request using URLSession
+        // Code send the network request using URLSession
         URLSession(configuration: .ephemeral).dataTask(with: request) { data, response, error in
             if let error = error {
                 completion(.failure(error))
@@ -27,8 +30,9 @@ class APIClient: NetworkProtocol {
         }.resume()
     }
     
+    // Sends a request and expects a response of type [T], where T is Decodable
     func sendRequests<T: Decodable>(type: [T].Type, request: URLRequest, completion: @escaping (Result<[T], Error>) -> Void) {
-        // Implement logic to send the network request using URLSession
+        // Code send the network request using URLSession
         URLSession(configuration: .ephemeral).dataTask(with: request) { data, response, error in
             if let error = error {
                 completion(.failure(error))
@@ -41,9 +45,11 @@ class APIClient: NetworkProtocol {
             }
             
             do {
+                // Decode the received data into an array of type T
                 let decodedData = try JSONDecoder().decode([T].self, from: data)
                 completion(.success(decodedData))
             } catch {
+                // Handle decoding errors
                 completion(.failure(error))
             }
         }.resume()

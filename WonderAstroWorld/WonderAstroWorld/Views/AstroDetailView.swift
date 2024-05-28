@@ -7,8 +7,30 @@
 
 import SwiftUI
 
+/**
+ A SwiftUI view representing a detailed view of astronomical data.
+
+ This view displays detailed information about an astronomical object, such as its title, date, explanation, and an image representing the object. It also provides options to load high-definition (HD) images and view the image in full screen.
+
+ ## Properties:
+ - `astro`: An optional instance of `Astro` representing the astronomical object.
+ - `image`: A state variable representing the loaded image.
+ - `loadHD`: A state variable to toggle loading of high-definition images.
+ - `expanded`: A state variable to control the expansion of the explanation text.
+ - `showProgressView`: A state variable to control the visibility of the progress view.
+ - `error`: A state variable representing any error occurred during image loading.
+ - `reload`: A state variable to trigger reloading of the view.
+ - Various constants used for UI styling and layout.
+
+ ## Methods:
+ - `loadData(astro:)`: Asynchronously loads the image data from the provided URL based on the selected options.
+
+ This view utilizes SwiftUI components such as `Text`, `ProgressView`, `Image`, and `ScrollView` to display detailed information about the astronomical object and the associated image. It includes options to toggle loading of HD images, expand the explanation text, and view the image in full screen. Additionally, it handles the asynchronous loading of image data and error handling.
+*/
+
 struct AstroDetailView: View {
     
+    // Properties
     var astro: Astro?
     @State private var image: UIImage?
     
@@ -19,6 +41,7 @@ struct AstroDetailView: View {
     @State private var reload = false
     @State private var showImageOnFullScreen = false
     
+    // Constants
     private let titlePlaceholder = "Title"
     private let normalButtonTitle = "Normal"
     private let hdButtonTitle = "HD"
@@ -33,8 +56,10 @@ struct AstroDetailView: View {
     private let wAWCornerRadius: CGFloat = 10
     private let paddingProgressView = UIScreen.main.bounds.width/CGFloat(2)
     
+    // View body
     var body: some View {
         
+        // View hierarchy
         if showImageOnFullScreen {
             if let image = image {
                 ScrollView(.horizontal, showsIndicators: false) {
@@ -144,8 +169,9 @@ struct AstroDetailView: View {
         
     }
     
+    // Methods
     private func loadData(astro: Astro) {
-        
+        // Data loading logic
         let urlString = loadHD ? astro.hdurl : astro.url
         
         if let urlString = urlString, let key = astro.date {
