@@ -6,6 +6,8 @@ Deployment targets - iOS (17.5), macOS (14.4)
  - SOLID principles followed while developing project.
  - Documentation added for the code.
  - Caching is done for images.
+ - WebView to show content other than images
+ - Dark Mode Supported
 
 
 Feature and Functionality as per requirements:
@@ -33,10 +35,10 @@ Feature and Functionality as per requirements:
 Additional Features Added:
 
 1. AstroListView:
-	  - Added functionality like selecting date from calendar and get data for the past dates. (On Click of calendar button on Top bar)
+    - Added functionality like selecting date from calendar and get data for the last 7 days from the selected date. (On Click of calendar button on Top bar)
 
 2. AstroDetailView:
-    - Added function like to see the HD version of the Picture.
+    - Added function like to see the HD version of the Picture. (To switch between HD and Normal Pic - click of HD/Normal Button on Top Bar)
     - Read More and Read less button added for large description for the Picture.
 
 3. Image Caching for both HD and Normal Picturs:
