@@ -40,6 +40,7 @@ Additional Features Added:
 2. AstroDetailView:
     - Added function like to see the HD version of the Picture. (To switch between HD and Normal Pic - click of HD/Normal Button on Top Bar)
     - Read More and Read less button added for large description for the Picture.
+    - Click on picture to see it in Original size (scrollable) and click again on image to see the previous view again.
 
 3. Image Caching for both HD and Normal Picturs:
     - Developed module for caching images in Cache memory.
